@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Announcing 3rd-party KASAN support (Address Sanitizer) for CentOS 7.5</title>
+	
+	<meta name="description" content="">
+	<meta name="image" content="">
+	
+	<meta itemprop="name" content="Announcing 3rd-party KASAN support (Address Sanitizer) for CentOS 7.5">
+	<meta itemprop="description" content="">
+	<meta itemprop="image" content="">
+	
+	<meta name="og:title" content="Announcing 3rd-party KASAN support (Address Sanitizer) for CentOS 7.5">
+	<meta name="og:description" content="">
+	
+	<meta name="og:url" content="/posts/2018-08-13-kasan-for-centos/">
+	<meta name="og:site_name" content="Announcing 3rd-party KASAN support (Address Sanitizer) for CentOS 7.5">
+	<meta name="og:type" content="article">
+	
+	<meta name="article:tag" content="kasan kernel linux ">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123743925-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+<body>
+
+<header>
+	
+	<a href="/" style="float: left;color:#ff3b30;">Kernelim Ltd</a>
+	
+	&nbsp;&nbsp;<a href="/archives/" style="color:#777;">Archives</a>&nbsp;&nbsp;<a href="/about/" style="color:#777;">About</a>
+	
+	
+	
+	<a href="/index.xml" style="color:#777;float: right;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+</header>
+
+
+<div id="loadingMask" style="width: 100%; height: 100%; position: fixed; background: #fff;"></div>
+<script>
+function fadeOut(el) {
+  el.style.opacity = 1;
+
+  var last = +new Date();
+  var tick = function() {
+    el.style.opacity = +el.style.opacity - (new Date() - last) / 80;
+    last = +new Date();
+    
+
+    if (el.style.opacity > 0) {
+      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+    } else {
+      el.style.display='none';
+    }
+  };
+
+  tick();
+}
+
+function ready(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+         el = document.getElementById('loadingMask');
+         fadeOut(el);
+        var elements = document.querySelectorAll("img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("alt")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("alt"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
+window.onload = ready;
+</script>
+
+<div class="content">
+  <h1>Announcing 3rd-party KASAN support (Address Sanitizer) for CentOS 7.5 <aside><a href="/tags/kasan/">kasan</a></a>&nbsp;&nbsp;&nbsp;<a href="/tags/kernel/">kernel</a></a>&nbsp;&nbsp;&nbsp;<a href="/tags/linux/">linux</a></a>&nbsp;&nbsp;&nbsp;</aside></h1>
+  <p>The <a href="https://github.com/google/sanitizers">Google sanitizer</a> project provides a set of enhancements to compilers along with run-time support for validating code&rsquo;s correctness. In previous years, a large effort was made to introduce those sanitizers into the Linux kernel, and this support is now in <a href="https://www.kernel.org/doc/html/v4.17/dev-tools/kasan.html">mainline</a>.</p>
+
+<p>However, many old Linux systems generally do not benefit from these recent enhancements.</p>
+
+<p>One of those earlier kernels is the one supplied by CentOS 7.x. Recognizing that it may be beneficial to have KASAN under <a href="https://en.wikipedia.org/wiki/CentOS">CentOS</a> 7.x systems, I&rsquo;ve made an effort to port the KASAN code base from the mainline Linux kernel v4.17 back to CentOS 7.x.</p>
+
+<p>The v1 release is available as a <a href="https://wiki.centos.org/HowTos/RebuildSRPM">Source RPM for CentOS</a>, and it produces a <code>kernel-kasan</code> RPM that is based on version <code>3.10.0-862.9.1.el7.v1.x86_64</code> of the CentOS kernel.</p>
+
+<p>Here is the link on Github:</p>
+
+<p><a href="https://github.com/kernelim/centos-kasan/releases/tag/centos-kasan-v1">centos-kasan-v1</a>.</p>
+
+<p>To inquire about additional support, please <a href="mailto:dan@kernelim.com">email me</a>.</p>
+
+<p>&nbsp;&nbsp; —  Dan Aloni</p>
+
+<p><img src="/static/images/centos-kasan-v1.png" alt="centos-kasan-v1-screenshot" /></p>
+
+</div>
+
+
+  <p><small>Written on August 13, 2018</small></p>
+
+
+
+<footer>
+	<p></p>
+</footer>
+</body>
+</html>
+

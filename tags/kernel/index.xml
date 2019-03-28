@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kernel on Kernelim Ltd</title>
+    <link>/tags/kernel/</link>
+    <description>Recent content in Kernel on Kernelim Ltd</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="/tags/kernel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Announcing 3rd-party KASAN support (Address Sanitizer) for CentOS 7.6</title>
+      <link>/posts/2019-03-28-kasan-for-centos-v2/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2019-03-28-kasan-for-centos-v2/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://github.com/google/sanitizers&#34;&gt;Google sanitizer&lt;/a&gt; project provides a set of enhancements to compilers along with run-time support for validating code&amp;rsquo;s correctness. In previous years, a large effort was made to introduce those sanitizers into the Linux kernel, and this support is now in &lt;a href=&#34;https://www.kernel.org/doc/html/v4.17/dev-tools/kasan.html&#34;&gt;mainline&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, many old Linux systems generally do not benefit from these recent enhancements.&lt;/p&gt;
+
+&lt;p&gt;One of those earlier kernels is the one supplied by CentOS 7.x. Recognizing that it may be beneficial to have KASAN under &lt;a href=&#34;https://en.wikipedia.org/wiki/CentOS&#34;&gt;CentOS&lt;/a&gt; 7.x systems, I&amp;rsquo;ve made an effort to port the KASAN code base from the mainline Linux kernel v4.17 back to CentOS 7.x.&lt;/p&gt;
+
+&lt;p&gt;The v2 release is available as a &lt;a href=&#34;https://wiki.centos.org/HowTos/RebuildSRPM&#34;&gt;Source RPM for CentOS&lt;/a&gt;, and it produces a &lt;code&gt;kernel-kasan&lt;/code&gt; RPM that is based on version &lt;code&gt;3.10.0-957.10.1.el7.x86_64&lt;/code&gt; of the CentOS kernel.&lt;/p&gt;
+
+&lt;p&gt;Here is the link on Github:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kernelim/centos-kasan/releases/tag/centos-kasan-v2&#34;&gt;centos-kasan-v2&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;(&lt;a href=&#34;../2018-08-13-kasan-for-centos&#34;&gt;link to the original v1 announcement&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;To inquire about additional support, please &lt;a href=&#34;mailto:dan@kernelim.com&#34;&gt;email me&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp; —  Dan Aloni&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Announcing 3rd-party KASAN support (Address Sanitizer) for CentOS 7.5</title>
+      <link>/posts/2018-08-13-kasan-for-centos/</link>
+      <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/2018-08-13-kasan-for-centos/</guid>
+      <description>&lt;p&gt;The &lt;a href=&#34;https://github.com/google/sanitizers&#34;&gt;Google sanitizer&lt;/a&gt; project provides a set of enhancements to compilers along with run-time support for validating code&amp;rsquo;s correctness. In previous years, a large effort was made to introduce those sanitizers into the Linux kernel, and this support is now in &lt;a href=&#34;https://www.kernel.org/doc/html/v4.17/dev-tools/kasan.html&#34;&gt;mainline&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;However, many old Linux systems generally do not benefit from these recent enhancements.&lt;/p&gt;
+
+&lt;p&gt;One of those earlier kernels is the one supplied by CentOS 7.x. Recognizing that it may be beneficial to have KASAN under &lt;a href=&#34;https://en.wikipedia.org/wiki/CentOS&#34;&gt;CentOS&lt;/a&gt; 7.x systems, I&amp;rsquo;ve made an effort to port the KASAN code base from the mainline Linux kernel v4.17 back to CentOS 7.x.&lt;/p&gt;
+
+&lt;p&gt;The v1 release is available as a &lt;a href=&#34;https://wiki.centos.org/HowTos/RebuildSRPM&#34;&gt;Source RPM for CentOS&lt;/a&gt;, and it produces a &lt;code&gt;kernel-kasan&lt;/code&gt; RPM that is based on version &lt;code&gt;3.10.0-862.9.1.el7.v1.x86_64&lt;/code&gt; of the CentOS kernel.&lt;/p&gt;
+
+&lt;p&gt;Here is the link on Github:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/kernelim/centos-kasan/releases/tag/centos-kasan-v1&#34;&gt;centos-kasan-v1&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To inquire about additional support, please &lt;a href=&#34;mailto:dan@kernelim.com&#34;&gt;email me&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&amp;nbsp; —  Dan Aloni&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;/static/images/centos-kasan-v1.png&#34; alt=&#34;centos-kasan-v1-screenshot&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
